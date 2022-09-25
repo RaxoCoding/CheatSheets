@@ -50,13 +50,13 @@ for address in elf.search(b'/bin/bash\x00'):
 ### Find the address of a symbol (function)
 ```python
 targetAddr = hex(elf.symbols['shell'])
-targetPkAddr = str(p32(elf.symbols['shell'], endian='little'))[2:-1:]
+targetPkAddr = p32(elf.symbols['shell'], endian='little')
 ```
 
 ### 0xdeadbeef
 ```python
 targetAddr = hex(0xdeadbeef)
-targetPkAddr = str(p32(0xdeadbeef))[2:-1:]
+targetPkAddr = p32(0xdeadbeef, endian='little')
 ```
 
 ## Feedback
