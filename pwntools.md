@@ -1,6 +1,6 @@
 # Remote Connection
 
-## Connect with ssh
+### Connect with ssh
 ```python
 shell = ssh(USER, SERVER, password=PASS, port=PORT)
 ```
